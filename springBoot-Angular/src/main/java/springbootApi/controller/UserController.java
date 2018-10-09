@@ -47,6 +47,7 @@ public class UserController {
 
 	@DeleteMapping(path = { "/users/{id}" })
 	public void delete(@PathVariable("id") Long id) {
+		
 		userRepository.deleteById(id);
 		
 	}
