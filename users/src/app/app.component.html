@@ -1,14 +1,9 @@
-<div class="container-fluid">
-  <div class="col-md-offset-1">
-    <h1>
-      Welcome to !
-    </h1>
+<div class="container spacer">
+  <div class="container">
+    <button routerLink="/users" class="btn btn-primary">List Users</button>
+    <button routerLink="/add" class="btn btn-primary">Add user</button>
   </div>
-  
-  <a routerLink="/users"> List Users</a>
-  <a style="margin-left:10px" routerLink="/add">Add User</a>
-  <br/>
-  <router-outlet></router-outlet>
+  <div class="container spacer">
+    <router-outlet></router-outlet>
   </div>
-
-
+</div>
