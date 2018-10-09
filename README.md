@@ -1,2 +1,2 @@
 # UserCrud
-Spring boot angular applicatin
+Spring boot angular application
