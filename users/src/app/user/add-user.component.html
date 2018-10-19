@@ -1,4 +1,4 @@
-<div class="col-md-6">
+<div class="">
     <h2 class="text-center">Add User</h2>
     <form>
         <div class="form-group">
@@ -16,6 +16,6 @@
             <input [(ngModel)]="user.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
         </div>
 
-        <button class="btn btn-success" (click)="createUser()">Create</button>
+        <button class="btn btn-success" (click)="createUser()">Create</button><button class="btn btn-danger" (click)="cancel()">Cancel</button>
     </form>
 </div>

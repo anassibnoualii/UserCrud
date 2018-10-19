@@ -1,5 +1,5 @@
-<div class="col-md-6">
-    <h2> Users Details</h2>
+<div class="panel panel-primary">
+    <h3 class="panel-heading"> Users Details</h3>
 
     <table class="table table-striped">
         <thead>
@@ -17,7 +17,7 @@
                 <td>{{user.firstName}}</td>
                 <td>{{user.lastName}}</td>
                 <td>{{user.email}}</td>
-                <td><button class="btn btn-danger" (click)="deleteUser(user)"> delete</button></td>
+                <td><button class="btn btn-primary" (click)="edit(user.id)"> edit</button><button class="btn btn-primary" (click)="view(user.id)"> view</button><button class="btn btn-danger" (click)="deleteUser(user)"> delete</button></td>
             </tr>
         </tbody>
     </table>
