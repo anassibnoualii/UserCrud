@@ -42,7 +42,7 @@ public class UserController {
 
 	@PutMapping("/users")
 	public User update(@RequestBody User user) {
-		return userRepository.save(user);
+		return userRepository.saveAndFlush(user);
 	}
 
 	@DeleteMapping(path = { "/users/{id}" })
