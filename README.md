@@ -1,15 +1,16 @@
 # UserCrud
 Spring boot angular application
-##To Do 
+## To Do 
 ### Backend 
-- [ ] getAll Users
-- [ ] getUser by Id
-- [ ] add new User
-- [ ] update User
-- [ ] delete User
+- [x] getAll Users
+- [x] getUser by Id
+- [x] add new User
+- [x] update User
+- [x] delete User
 ### Frontend
-- [ ] display All Users
-- [ ] create new User
-- [ ] delete User
+- [x] display All Users
+- [x] create new User
+- [x] delete User
 - [ ] view User
 - [ ] edit User
+
