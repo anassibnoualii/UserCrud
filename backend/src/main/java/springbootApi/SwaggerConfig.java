@@ -1,10 +1,14 @@
 package springbootApi;
 
+import java.util.Collections;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -13,14 +17,34 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig {
 	@Bean
-	    public Docket api() {
-	        return new Docket(DocumentationType.SWAGGER_2)
-	                .select()
-	                .apis(RequestHandlerSelectors.basePackage("springbootApi.controller"))
-	                .paths(PathSelectors.any())
-	                .build(); 
-	        
-	    }
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2).select()
+				.apis(RequestHandlerSelectors.basePackage("springbootApi")).paths(PathSelectors.any()).build()
+				.apiInfo(apiInfo());
+	}
 
+	private ApiInfo apiInfo() {
+		return new ApiInfo("My REST API", "Some custom description of API.", "API TOS", "Terms of service",
+				new Contact("Anass IBNOU ALI", "https://github.com/anassibnoualii", "annass.ibnouali@gmail.com"), "License of API",
+				"API license URL", Collections.emptyList());
+		
+		/* return new ApiInfoBuilder()
+				    .title("Hotel Management Rest APIs")
+				    .description("This page lists all the rest apis for Hotel Management App.")
+				    .version("1.0-SNAPSHOT")
+				    .build();*/
+		/*
+		 return new ApiInfo(
+            "TITLE",
+            "DESCIPRION",
+            "VERSION",
+            "TERMS OF SERVICE URL",
+            new Contact("NAME","URL","EMAIL"),
+            "LICENSE",
+            "LICENSE URL",
+            Collections.emptyList()
+    );
+		 **/
+	}
 
 }
