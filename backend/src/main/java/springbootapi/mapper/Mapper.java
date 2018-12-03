@@ -1,6 +1,6 @@
-package mapper;
+package springbootapi.mapper;
 
-import dto.UserDTO;
+import springbootapi.dto.UserDTO;
 import springbootapi.entities.User;
 
 public class Mapper {
