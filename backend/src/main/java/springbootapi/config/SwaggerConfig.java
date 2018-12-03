@@ -1,4 +1,4 @@
-package springbootapi;
+package springbootapi.config;
 
 import java.util.Collections;
 

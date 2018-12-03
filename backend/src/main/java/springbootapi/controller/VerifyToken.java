@@ -4,10 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
-import java.security.UnrecoverableKeyException;
 import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
@@ -60,8 +57,7 @@ public class VerifyToken {
 		return Jwts.parser().setSigningKey(publicKey).parseClaimsJws(response);
 	}
 
-	public PublicKey loadPublicKey(String filename) throws KeyStoreException, UnrecoverableKeyException, NoSuchAlgorithmException,
-	CertificateException, IOException {
+	public PublicKey loadPublicKey(String filename) throws CertificateException, IOException {
 		CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
 		Certificate certificate = certificateFactory.generateCertificate(new FileInputStream(filename));
 		return certificate.getPublicKey();
