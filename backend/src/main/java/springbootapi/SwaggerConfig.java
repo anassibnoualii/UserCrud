@@ -1,4 +1,4 @@
-package springbootApi;
+package springbootapi;
 
 import java.util.Collections;
 
@@ -27,24 +27,6 @@ public class SwaggerConfig {
 		return new ApiInfo("My REST API", "Some custom description of API.", "API TOS", "Terms of service",
 				new Contact("Anass IBNOU ALI", "https://github.com/anassibnoualii", "annass.ibnouali@gmail.com"), "License of API",
 				"API license URL", Collections.emptyList());
-		
-		/* return new ApiInfoBuilder()
-				    .title("Hotel Management Rest APIs")
-				    .description("This page lists all the rest apis for Hotel Management App.")
-				    .version("1.0-SNAPSHOT")
-				    .build();*/
-		/*
-		 return new ApiInfo(
-            "TITLE",
-            "DESCIPRION",
-            "VERSION",
-            "TERMS OF SERVICE URL",
-            new Contact("NAME","URL","EMAIL"),
-            "LICENSE",
-            "LICENSE URL",
-            Collections.emptyList()
-    );
-		 **/
 	}
 
 }

@@ -1,4 +1,4 @@
-package springbootApi.controller;
+package springbootapi.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import springbootApi.dao.UserRepository;
-import springbootApi.entities.User;
+import springbootapi.dao.UserRepository;
+import springbootapi.entities.User;
 
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
