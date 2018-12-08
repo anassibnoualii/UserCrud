@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import springbootapi.dao.UserRepository;
+import springbootapi.dto.UserDTO;
 import springbootapi.entities.User;
+import springbootapi.service.UserService;
 
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
@@ -23,6 +25,9 @@ import springbootapi.entities.User;
 public class UserController {
 	@Autowired
 	UserRepository userRepository;
+	
+	@Autowired
+	UserService userService;
 
 	@GetMapping("/users")
 	public List<User> findAll() {
@@ -30,8 +35,8 @@ public class UserController {
 	}
 
 	@GetMapping(path = { "/users/{id}" })
-	public Optional<User> findOne(@PathVariable("id") Long id) {
-		return userRepository.findById(id);
+	public UserDTO findOne(@PathVariable("id") Long id) {
+		return userService.findUser(id);
 	}
 
 	@PostMapping("/users")
