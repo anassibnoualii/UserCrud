@@ -26,7 +26,7 @@ import springbootapi.service.UserService;
 @CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 @RestController
 @RequestMapping("/api")
-@Api(value = "users", tags = "manage usesr")
+@Api(value = "users", tags = "manage users")
 
 public class UserController {
 	@Autowired
